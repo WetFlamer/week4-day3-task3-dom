@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main">
+      <ul id="list">
+        <li>html</li>
+        <li>css</li>
+      </ul>
+    </div>
+    <div id="copyrigth">(c) INTOCODE</div>
+    <script>
+        const first = () => {
+            const div = document.getElementById('main')
+            const first = document.createElement('h1')
+            first.textContent = 'Работа с DOM'
+            div.before(first)
+
+        }
+        const person = () => {
+            const div = document.getElementById('main')
+            const a = document.createElement('a')
+            a.href = 'https://developer.mozilla.org/ru/docs/Web/API/Document_Object_Model'
+            a.textContent = 'Руководство DOM'
+            div.append(a)
+        }
+        const color = (colorC) => {
+            document.body.style.background = colorC
+        }
+        const textL = (text) => {
+            const ul = document.getElementById('list') 
+            const li = document.createElement('li')
+            li.textContent = text
+            ul.append(li)
+        }
+        const deleteC = () => {
+            const copyrigth = document.getElementById('copyrigth')
+            copyrigth.remove()
+        }
+    </script>
+  </body>
+</html>
